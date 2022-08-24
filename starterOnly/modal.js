@@ -19,5 +19,24 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block";
 }
+//************ Fermer la Modale ******************//
+// On récupère le btn close de la modal
+const btnClose = document.querySelector(".close"); 
+
+// On écoute l'évenement click avec la fonction closeModal
+btnClose.addEventListener('click', closeModal);
+
+//On crée la fonction closeModal qui permet de fermer la modal
+function closeModal () {
+  modalbg.style.display = "none";
+}
+
+// On écoute l'évenement click avec la fonction refresh
+btnClose.addEventListener('click', refresh);
+
+//On crée la fonction refresh pour actualiser la pages a la fermeture de la modal pour avoir une modal vide à sa reouverture
+function refresh () {
+  location.reload(true);
+}
 
 
